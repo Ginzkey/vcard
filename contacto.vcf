@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+EMAIL;TYPE=WORK:luis.pino@casta.cl
+EMAIL;TYPE=HOME:foxzunit@gmail.com
+FN:luchito pinito
+N:pinito;luchito;;;
+ORG:casita
+TEL;TYPE=WORK,VOICE:+56973848871
+TEL;TYPE=CELL,HOME:12345678
+TITLE:ingeniero
+URL:www.linkedin.com/in/luis-pino-vergara-57a529b8
+END:VCARD
