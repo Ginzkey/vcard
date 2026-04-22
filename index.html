@@ -3,133 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Enrique | Conectividad & Redes</title>
+    <title>Tarjeta Digital | Luis & Gatitos s.a.</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <style>
+        /* =========================================
+           CONFIGURACIÓN RÁPIDA (Edita aquí)
+        ============================================ */
         :root {
-            --primary: #e67e22; /* El naranja característico de Luis & Gatitos s.a. */
+            --nombre: "Luis Enrique Pino";
+            --profesion: "Ingeniero en Conectividad y Redes";
+            --trabajo: "Luis & Gatitos s.a.";
+            
+            --tel-trabajo: "+569XXXXXXXX";
+            --tel-personal: "+569XXXXXXXX"; /* Dejar vacío "" si no quieres mostrarlo */
+            
+            --email-trabajo: "contacto@empresa.cl";
+            --email-personal: "luis.pino@gmail.com";
+            
+            --linkedin: "https://linkedin.com/in/tuperfil";
+            --instagram: "https://instagram.com/tuperfil";
+            --github: "https://github.com/ginzkey";
+            
+            --imagen-perfil: "logo-gato.png";
+            --vcf-file: "contacto.vcf";
+            
+            /* Colores */
+            --primary: #e67e22; 
             --glass: rgba(255, 255, 255, 0.08);
-            --border: rgba(255, 255, 255, 0.1);
         }
 
-        body {
-            background: #0f0f0f;
-            background-image: radial-gradient(circle at 20% 30%, #2c3e50 0%, #0f0f0f 100%);
-            color: white;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .card {
-            width: 100%;
-            max-width: 400px;
-            background: var(--glass);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid var(--primary);
-            margin-bottom: 20px;
-            object-fit: cover;
-            background: #222;
-        }
-
-        h1 { margin: 10px 0 5px; font-size: 24px; letter-spacing: 1px; }
-        .tagline { color: var(--primary); font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 30px; }
-
-        .links-container { display: flex; flex-direction: column; gap: 12px; }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            padding: 14px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: 0.3s ease;
-            font-weight: 500;
-        }
-
-        .btn:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            color: white;
-            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
-        }
-
-        .btn i { width: 25px; font-size: 18px; margin-right: 15px; text-align: center; }
-
-        /* Formulario de Captura (Add Me) */
-        .add-me-section {
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 1px solid var(--border);
-            text-align: left;
-        }
-
-        .add-me-section h3 { font-size: 18px; color: var(--primary); margin-bottom: 15px; text-align: center; }
-
-        .input-group { margin-bottom: 10px; }
-        input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: rgba(0,0,0,0.3);
-            color: white;
-            font-size: 14px;
-            box-sizing: border-box;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            border: none;
-            background: var(--primary);
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-top: 5px;
-        }
-
-        .submit-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
-
-        .footer { margin-top: 30px; font-size: 11px; opacity: 0.5; line-height: 1.5; }
+        /* =========================================
+           ESTILOS (No tocar a menos que sepas CSS)
+        ============================================ */
+        body { background: #0f0f0f; background-image: radial-gradient(circle at 20% 30%, #2c3e50 0%, #0f0f0f 100%); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; justify-content: center; min-height: 100vh; padding: 60px 20px; }
+        .card { width: 100%; max-width: 400px; background: var(--glass); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 40px 25px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .profile-img { width: 140px; height: 140px; border-radius: 25px; border: 3px solid var(--primary); margin-top: -90px; object-fit: cover; background: #222; }
+        h1::after { content: var(--nombre); }
+        .prof-text::after { content: var(--profesion); }
+        .work-text::after { content: var(--trabajo); }
+        .tagline { margin-bottom: 25px; }
+        .tagline p { margin: 5px 0; font-size: 14px; }
+        .links-container { display: flex; flex-direction: column; gap: 10px; }
+        .btn { display: flex; align-items: center; padding: 14px 18px; background: rgba(255, 255, 255, 0.05); color: white; text-decoration: none; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; font-size: 14px; }
+        .btn:hover { background: var(--primary); transform: translateY(-2px); }
+        .btn i { width: 25px; font-size: 18px; margin-right: 12px; }
+        .social-grid { display: flex; justify-content: center; gap: 15px; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .social-icon { color: white; font-size: 22px; transition: 0.3s; }
+        .social-icon:hover { color: var(--primary); transform: scale(1.2); }
+        .save-btn { border: 2px solid var(--primary) !important; font-weight: bold; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-<div class="card animate__animated animate__fadeInUp">
-    <img src="logo-gato.png" alt="Luis & Gatitos s.a." class="profile-img">
+<div class="card animate__animated animate__fadeIn">
+    <script>
+        // Pequeño script para inyectar la imagen y links de forma dinámica
+        document.addEventListener("DOMContentLoaded", function() {
+            const root = getComputedStyle(document.documentElement);
+            document.getElementById('pfp').src = root.getPropertyValue('--imagen-perfil').trim().replace(/"/g, '');
+            
+            // Configurar enlaces
+            const links = {
+                'link-tel-w': 'tel:' + root.getPropertyValue('--tel-trabajo').trim().replace(/"/g, ''),
+                'link-tel-p': 'tel:' + root.getPropertyValue('--tel-personal').trim().replace(/"/g, ''),
+                'link-mail-w': 'mailto:' + root.getPropertyValue('--email-trabajo').trim().replace(/"/g, ''),
+                'link-mail-p': 'mailto:' + root.getPropertyValue('--email-personal').trim().replace(/"/g, ''),
+                'link-li': root.getPropertyValue('--linkedin').trim().replace(/"/g, ''),
+                'link-ig': root.getPropertyValue('--instagram').trim().replace(/"/g, ''),
+                'link-gh': root.getPropertyValue('--github').trim().replace(/"/g, ''),
+                'link-vcf': root.getPropertyValue('--vcf-file').trim().replace(/"/g, '')
+            };
+
+            for (const [id, url] of Object.entries(links)) {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (url.includes('""') || url.length < 5) { el.style.display = 'none'; } 
+                    else { el.href = url; }
+                }
+            }
+        });
+    </script>
+
+    <img id="pfp" src="" class="profile-img">
     
-    <h1>Luis Enrique</h1>
-    <div class="tagline">Ingeniería en Conectividad y Redes</div>
+    <h1 id="name-display"></h1>
+    <div class="tagline">
+        <p class="prof-text" style="color: var(--primary); font-weight: bold;"></p>
+        <p class="work-text" style="opacity: 0.8;"></p>
+    </div>
 
     <div class="links-container">
-        <a href="https://wa.me/569XXXXXXXX" class="btn">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Profesional
-        </a>
+        <a id="link-tel-w" href="#" class="btn"><i class="fa-solid fa-briefcase"></i> Teléfono Trabajo</a>
+        <a id="link-tel-p" href="#" class="btn"><i class="fa-solid fa-user"></i> Teléfono Personal</a>
+        <a id="link-mail-w" href="#" class="btn"><i class="fa-solid fa-envelope-open-text"></i> Email Corporativo</a>
+        <a id="link-mail-p" href="#" class="btn"><i class="fa-solid fa-envelope"></i> Email Personal</a>
         
-        <a href="mailto:luis@ejemplo.cl" class="btn">
-            <i class="fa-solid fa-envelope">
+        <a id="link-vcf" href="#" class="btn save-btn">
+            <i class="fa-solid fa-file-import"></i> GUARDAR CONTACTO (.VCF)
+        </a>
+    </div>
+
+    <div class="social-grid">
+        <a id="link-li" href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+        <a id="link-ig" href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a id="link-gh" href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <div style="margin-top: 25px; font-size: 10px; opacity: 0.4;">
+        Luis & Gatitos s.a. © 2026
+    </div>
+</div>
+
+</body>
+</html>
