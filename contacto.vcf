@@ -1,12 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
-EMAIL;TYPE=WORK:luis.pino@casta.cl
-EMAIL;TYPE=HOME:foxzunit@gmail.com
-FN:luchito pinito
-N:pinito;luchito;;;
-ORG:casita
-TEL;TYPE=WORK,VOICE:+56973848871
-TEL;TYPE=CELL,HOME:12345678
-TITLE:ingeniero
-URL:www.linkedin.com/in/luis-pino-vergara-57a529b8
+EMAIL;TYPE=WORK:alicia.diaz@bupa.cl
+EMAIL;TYPE=HOME:a.diazrosales@hotmail.com
+FN: Alicia Diaz Rosales
+N:Diaz Rosales; Alicia;;;
+ORG:Clinica Bupa
+TEL;TYPE=CELL:+56969092285
+TITLE:Enfermera
 END:VCARD
