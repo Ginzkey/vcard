@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luis - Tarjeta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root { --primary: #e67e22; --bg: #0f0f0f; }
+        body { background: var(--bg); color: white; font-family: sans-serif; margin: 0; display: flex; justify-content: center; padding: 80px 20px; }
+        .card { width: 100%; max-width: 400px; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border-radius: 30px; padding: 60px 20px 30px; text-align: center; border: 1px solid rgba(255,255,255,0.1); position: relative; }
+        .profile-img { width: 130px; height: 130px; border-radius: 50%; border: 4px solid var(--primary); position: absolute; top: -65px; left: 50%; transform: translateX(-50%); object-fit: cover; background: #222; }
+        .title { color: var(--primary); font-size: 14px; font-weight: bold; text-transform: uppercase; margin-bottom: 25px; }
+        .btn { display: flex; align-items: center; justify-content: center; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-bottom: 12px; transition: 0.3s; color: white; }
+        .save-btn { background: var(--primary); }
+        .social-row { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
+        .social-icon { color: white; font-size: 24px; transition: 0.3s; }
+        .feedback-box { margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        input { width: 85%; padding: 12px; margin-bottom: 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: white; }
+        .action-btns { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+        .send-wa { background: #25D366; width: 90%; border: none; padding: 12px; border-radius: 10px; color: white; font-weight: bold; cursor: pointer; }
+        .send-mail { background: #3498db; width: 90%; border: none; padding: 12px; border-radius: 10px; color: white; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="profile.png" class="profile-img">
+        <h1>luis pepino</h1>
+        <div class="title">ingeniero en gatitos</div>
+        <div class="social-row">
+            <a href="https://www.linkedin.com/in/luis-pino-vergara-57a529b8/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/luis-pino-vergara-57a529b8/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="contacto.vcf" class="btn save-btn"><i class="fas fa-user-plus" style="margin-right:10px"></i> GUARDAR EN AGENDA</a>
+        <div class="feedback-box">
+            <h3 style="font-size:16px;">¿Intercambiamos datos? 🐾</h3>
+            <input type="text" id="v_name" placeholder="Tu Nombre">
+            <input type="text" id="v_info" placeholder="Tu Teléfono o Email">
+            <div class="action-btns">
+                <button class="send-wa" onclick="sendWA()"><i class="fab fa-whatsapp"></i> ENVIAR POR WHATSAPP</button>
+                <button class="send-mail" onclick="sendMail()"><i class="fas fa-envelope"></i> ENVIAR POR EMAIL</button>
+            </div>
+        </div>
+        <div style="font-size:10px; opacity:0.3; margin-top:30px;">ALBARICOQUE IT SYSTEM</div>
+    </div>
+    <script>
+        function sendWA() {
+            const n = document.getElementById('v_name').value;
+            const i = document.getElementById('v_info').value;
+            if(!n || !i) { alert('Completa los campos'); return; }
+            const text = encodeURIComponent('Hola luis, soy ' + n + '. Mi contacto es ' + i);
+            window.location.href = 'https://wa.me/+56973848871?text=' + text;
+        }
+        function sendMail() {
+            const n = document.getElementById('v_name').value;
+            const i = document.getElementById('v_info').value;
+            if(!n || !i) { alert('Completa los campos'); return; }
+            const subject = encodeURIComponent('Nuevo contacto vCard');
+            const body = encodeURIComponent('Hola luis, soy ' + n + '. Mi contacto es ' + i);
+            window.location.href = 'mailto:foxzunit@gmail.com?subject=' + subject + '&body=' + body;
+        }
+    </script>
+</body>
+</html>
