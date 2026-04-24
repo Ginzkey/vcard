@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbus GATUNO</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root { --primary: #e67e22; --bg: #0f0f0f; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; justify-content: center; }
+        .card { width: 100%; max-width: 450px; background: #1a1a1a; min-height: 100vh; text-align: center; }
+        .banner { width: 100%; height: 220px; background: url('b.png') center/cover; background-color: #222; }
+        .profile-img { width: 150px; height: 150px; border-radius: 20px; border: 4px solid var(--primary); margin-top: -75px; object-fit: cover; background: #111; position: relative; z-index: 5; }
+        .content { padding: 25px; } h1 { margin: 0; font-size: 24px; }
+        .subtitle { color: var(--primary); font-weight: bold; margin: 5px 0 20px 0; font-size: 14px; }
+        .social-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+        .social-icon { width: 45px; height: 45px; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px; transition: 0.3s; }
+        .social-icon:hover { transform: scale(1.1); filter: brightness(1.2); }
+        .btn-save { display: block; background: var(--primary); color: white; text-decoration: none; padding: 15px; border-radius: 12px; font-weight: bold; margin-bottom: 20px; }
+        .map-box { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 20px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .btn-nav { display: block; background: #4285F4; color: white; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: bold; margin-top: 15px; }
+        .btn-wa { background: #25D366; width: 95%; border: none; padding: 12px; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; }
+        .footer { padding: 60px 20px; font-size: 11px; opacity: 0.6; } .footer a { color: var(--primary); text-decoration: none; }
+    </style></head><body><div class="card"><div class="banner"></div><img src="p.png" class="profile-img"><div class="content">
+            <h1>Turbus GATUNO</h1><p class="subtitle">Transporte de gatitos</p><div class="social-row"><a href="https://www.empresadementira.cl" target="_blank" class="social-icon" style="background:#444"><i class="fas fa-globe"></i></a><a href="https://cl.pinterest.com/" target="_blank" class="social-icon" style="background:#bd081c"><i class="fab fa-pinterest"></i></a><a href="https://dribbble.com/" target="_blank" class="social-icon" style="background:#ea4c89"><i class="fab fa-dribbble"></i></a><a href="https://www.instagram.com/" target="_blank" class="social-icon" style="background:#C13584"><i class="fab fa-instagram"></i></a><a href="https://www.paypal.com/cl/home" target="_blank" class="social-icon" style="background:#444"><i class="fas fa-globe"></i></a><a href="https://wa.me/+559123456789" target="_blank" class="social-icon" style="background:#25D366"><i class="fab fa-whatsapp"></i></a></div>
+            <a href="c.vcf" download="contacto.vcf" class="btn-save"><i class="fas fa-user-plus"></i> GUARDAR CONTACTO</a><div class="map-box"><p style="font-weight:bold; color:var(--primary); margin-bottom:5px;"><i class="fas fa-map-marker-alt"></i> UBICACIÓN</p>
+                <p style="font-size: 12px; opacity:0.8; margin-bottom:15px;">Av. Héroes de la Concepción 2140, 1102078 Iquique, Tarapacá</p>
+                <iframe width="100%" height="200" style="border:0; border-radius:15px;" frameborder="0" src="https://www.google.com/maps?q=Av.+Héroes+de+la+Concepción+2140,+1102078+Iquique,+Tarapacá&output=embed"></iframe>
+                <a href="https://maps.app.goo.gl/gH646eeMn7CdUgrv7" target="_blank" class="btn-nav"><i class="fas fa-location-arrow"></i> IR AL LOCAL</a></div>
+            <div style="background: rgba(255,255,255,0.03); border-radius: 15px; padding: 15px; border: 1px solid rgba(255,255,255,0.1); margin-top: 20px;">
+                <p style="font-size:13px; color:var(--primary); margin-bottom:10px;">¿Intercambiamos datos? 🐾</p>
+                <input id="v_n" placeholder="Tu nombre" style="width: 85%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #333; background: #000; color: white; text-align: center;">
+                <button class="btn-wa" onclick="sW()"><i class="fab fa-whatsapp"></i> ENVIAR MIS DATOS</button>
+            </div><div class="footer">Desarrollado por <a href="https://ginzkey.github.io/vcard/ID_2588AF/" target="_blank">Albaricoque Connect IT 🐾</a></div>
+        </div></div><script>
+        function sW() {
+            const n = document.getElementById('v_n').value || "un contacto";
+            const myWa = atob('KzU1OTEyMzQ1Njc4OQ==');
+            let msg = "Hola " + "Turbus GATUNO" + ", soy " + n + ". Vi tu perfil y me gustaría contáctarte.";
+            window.location.href = 'https://wa.me/' + myWa + '?text=' + encodeURIComponent(msg);
+        }
+    </script></body></html>
