@@ -2,81 +2,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Alicia Francisca</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia Francisca</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        :root { --primary: #ff80c0; --bg: #0f0f0f; }
+        :root { --primary: #ff80ff; --bg: #0f0f0f; }
         body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; justify-content: center; }
-        .wrapper { width: 100%; max-width: 450px; background: #1a1a1a; min-height: 100vh; position: relative; padding-bottom: 40px; }
-        .banner { width: 100%; height: 200px; background-image: url('b.png'); background-size: cover; background-position: center; }
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid var(--primary); position: relative; margin: -70px auto 0 auto; display: block; object-fit: cover; background: #222; z-index: 10; }
-        .content { padding: 20px; text-align: center; }
-        h1 { margin-top: 10px; font-size: 26px; margin-bottom: 5px; }
-        .title { color: var(--primary); font-size: 13px; font-weight: bold; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 1px; }
-        .btn { display: flex; align-items: center; justify-content: center; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; margin-bottom: 12px; color: white; background: var(--primary); transition: 0.3s; }
-        .btn:hover { transform: scale(1.02); opacity: 0.9; }
-        .social-row { display: flex; justify-content: center; gap: 20px; margin: 20px 0; }
-        .social-icon { color: white; font-size: 32px; opacity: 0.9; transition: 0.3s; }
-        .social-icon:hover { color: var(--primary); transform: translateY(-3px); }
-        .feedback-box { background: rgba(255,255,255,0.03); border-radius: 20px; padding: 20px; margin-top: 30px; border: 1px solid rgba(255,255,255,0.1); }
-        select, input { width: 90%; padding: 12px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #333; background: #000; color: white; text-align: center; font-size: 14px; }
-        .error-msg { color: #ff4d4d; font-size: 11px; margin-bottom: 10px; display: none; }
-        .send-wa { background: #25D366; width: 100%; border: none; padding: 15px; border-radius: 10px; color: white; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        .send-wa:disabled { background: #555; cursor: not-allowed; }
-        .footer-credit { padding: 20px; text-align: center; }
-        .footer-credit p { color: #888; font-size: 12px; margin: 0; }
-        .brand-link { color: #e67e22; text-decoration: none; font-weight: bold; font-size: 16px; }
-        .cta-link { display: block; margin-top: 8px; color: var(--primary); text-decoration: none; font-size: 14px; font-weight: bold; }
+        .card { width: 100%; max-width: 450px; background: #1a1a1a; min-height: 100vh; text-align: center; position: relative; }
+        .banner { width: 100%; height: 220px; background: url('b.png') center/cover; background-color: #222; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--primary); margin-top: -75px; object-fit: cover; background: #111; position: relative; z-index: 5; }
+        .content { padding: 25px; padding-bottom: 20px; }
+        h1 { margin: 0; font-size: 24px; letter-spacing: 0.5px; }
+        .subtitle { color: var(--primary); font-weight: bold; margin: 5px 0 20px 0; font-size: 14px; }
+        .social-row { display: flex; justify-content: center; gap: 12px; margin: 20px 0; }
+        .social-icon { width: 45px; height: 45px; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px; }
+        .btn-save { display: block; background: var(--primary); color: white; text-decoration: none; padding: 15px; border-radius: 12px; font-weight: bold; margin-bottom: 20px; }
+        .map-box { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 20px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .btn-nav { display: block; background: #4285F4; color: white; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: bold; margin-top: 15px; }
+        .feedback-box { background: rgba(255,255,255,0.03); border-radius: 15px; padding: 15px; border: 1px solid rgba(255,255,255,0.1); margin-top: 20px; }
+        input { width: 85%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #333; background: #000; color: white; text-align: center; }
+        .btn-wa { background: #25D366; width: 95%; border: none; padding: 12px; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; }
+        .footer { padding: 80px 20px; font-size: 11px; opacity: 0.7; line-height: 2.5; }
+        .footer a { color: var(--primary); text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="card">
         <div class="banner"></div>
         <img src="p.png" class="profile-img">
         <div class="content">
             <h1>Alicia Francisca Diaz Rosales</h1>
-            <div class="title">Enfermera Educacion a paciente / Coordinacion docente enfermeria USS</div>
-            <div class="social-row"><a href="javascript:void(0)" onclick="window.open(atob('aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2FsaWNpYS1kaWF6LXJvc2FsZXMtYTkxMjc3MjFhLw=='),'_blank')" class="social-icon"><i class="fab fa-linkedin"></i></a></div>
-            <a href="c.vcf" class="btn"><i class="fas fa-save" style="margin-right:10px"></i> GUARDAR CONTACTO</a>
+            <p class="subtitle">Enfermera Educacion a paciente / Coordinacion docente enfermeria USS en Clinica Bupa STGO.</p>
+            <div class="social-row"><a href="https://www.linkedin.com/in/alicia-diaz-rosales-a9127721a/" target="_blank" class="social-icon" style="background:#0077b5"><i class="fab fa-linkedin"></i></a></div>
+            <a href="c.vcf" class="btn-save"><i class="fas fa-user-plus"></i> GUARDAR CONTACTO</a>
+            
             <div class="feedback-box">
-                <p style="font-weight:bold; color:var(--primary); margin-bottom:15px;">¿Intercambiamos datos? 🐾</p>
-                <input id="v_n" placeholder="Tu Nombre">
-                <select id="v_type" onchange="updatePlaceholders()">
-                    <option value="WhatsApp">Vía WhatsApp 🟢</option>
-                    <option value="Email">Vía Email 🔵</option>
-                </select>
-                <input id="v_data1" placeholder="Ingresa tu WhatsApp" oninput="validate()">
-                <input id="v_data2" placeholder="Repite tu WhatsApp" oninput="validate()">
-                <div id="v_err" class="error-msg">⚠️ Los datos no coinciden</div>
-                <button id="v_btn" class="send-wa" onclick="sW()" disabled><i class="fab fa-whatsapp"></i> ENVIAR DATOS</button>
+                <p style="font-size:13px; color:var(--primary); margin-bottom:10px;">¿Intercambiamos datos? 🐾</p>
+                <input id="v_n" placeholder="Tu nombre">
+                <button class="btn-wa" onclick="sW()"><i class="fab fa-whatsapp"></i> ENVIAR MIS DATOS</button>
             </div>
-        </div>
-        <div class="footer-credit">
-            <p>Desarrollado por <a href="https://ginzkey.github.io/vcard/ID_2588AF/" class="brand-link">Albaricoque Connect IT 🐾</a></p>
-            <a href="https://ginzkey.github.io/vcard/ID_2588AF/" class="cta-link">¿Te gustó? Contáctanos aquí</a>
+            <div class="footer">
+                ¿Te gustó este perfil? <a href="https://ginzkey.github.io/vcard/ID_2588AF/" target="_blank">¡Contáctanos aquí!</a><br>
+                Desarrollado por <a href="https://ginzkey.github.io/vcard/ID_2588AF/" target="_blank">Albaricoque Connect IT 🐾</a>
+            </div>
         </div>
     </div>
     <script>
-        function updatePlaceholders() {
-            const type = document.getElementById('v_type').value;
-            const d1 = document.getElementById('v_data1'), d2 = document.getElementById('v_data2'), btn = document.getElementById('v_btn');
-            d1.placeholder = "Ingresa tu " + type; d2.placeholder = "Repite tu " + type;
-            d1.value = ""; d2.value = "";
-            btn.innerHTML = (type === 'WhatsApp') ? '<i class="fab fa-whatsapp"></i> ENVIAR DATOS' : '<i class="fas fa-envelope"></i> ENVIAR DATOS';
-            validate();
-        }
-        function validate() {
-            const n = document.getElementById('v_n').value, d1 = document.getElementById('v_data1').value, d2 = document.getElementById('v_data2').value;
-            const err = document.getElementById('v_err'), btn = document.getElementById('v_btn');
-            if(d1 && d2 && d1 !== d2) { err.style.display = 'block'; btn.disabled = true; }
-            else { err.style.display = 'none'; btn.disabled = !(n && d1 && d1 === d2); }
-        }
         function sW() {
-            const n = document.getElementById('v_n').value, type = document.getElementById('v_type').value, data = document.getElementById('v_data1').value;
+            const n = document.getElementById('v_n').value || "un contacto";
             const myWa = atob('KzU2OTY5MDkyMjg1');
-            let msg = "Hola Alicia Francisca, soy " + n + ". Mi " + type + " es: " + data;
+            let msg = "Hola " + "Alicia Francisca Diaz Rosales" + ", soy " + n + ". Vi tu perfil y me gustaría contáctarte.";
             window.location.href = 'https://wa.me/' + myWa + '?text=' + encodeURIComponent(msg);
         }
     </script>
